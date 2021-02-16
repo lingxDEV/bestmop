@@ -167,7 +167,7 @@ class boss_nalak : public CreatureScript
 };
 
 // Lightning Tether / Static Shield / StormCloud player check.
-class PlayerCheck : public std::unary_function<Unit*, bool>
+class PlayerCheck : public zonaxtrema::unary_function<Unit*, bool>
 {
     public:
         explicit PlayerCheck(Unit* _caster) : caster(_caster) { }
@@ -285,7 +285,7 @@ class spell_lightning_tether_trigger : public SpellScriptLoader
 };
 
 // Lightning Tether dmg distance check.
-class DistanceCheck : public std::unary_function<Unit*, bool>
+class DistanceCheck : public zonaxtrema::unary_function<Unit*, bool>
 {
     public:
         DistanceCheck(Unit* caster, float dist) : _caster(caster), _dist(dist) { }

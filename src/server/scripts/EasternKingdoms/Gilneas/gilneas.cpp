@@ -16,7 +16,7 @@
 #include "ScriptMgr.h"
 #include "ScriptedCreature.h"
 
-#include <array>
+//#include <array>
 
 enum
 {
@@ -3494,7 +3494,7 @@ class npc_king_genn_greymane_last_stand  : public CreatureScript
 
 class spell_worgen_intro_completion  : public SpellScriptLoader
 {
-    struct SeerCheck  : public std::unary_function<WorldObject const *, bool>
+    struct SeerCheck  : public zonaxtrema::unary_function<WorldObject const *, bool>
     {
         explicit SeerCheck(uint64 guid)
             : casterGUID(guid)

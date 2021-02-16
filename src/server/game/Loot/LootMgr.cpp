@@ -1952,7 +1952,7 @@ void BonusLootProcessor::ProcessItemLootFor(Player* player)
     }
     else
     {
-        std::random_shuffle(l_Items.begin(), l_Items.end());
+        zonaxtrema::random_shuffle(l_Items.begin(), l_Items.end());
         uint8 selectItem = urand(0, l_Items.size());
 
         if (roll_chance_i(l_DropChance))

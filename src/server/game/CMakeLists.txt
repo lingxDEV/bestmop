@@ -10,6 +10,7 @@
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 file(GLOB_RECURSE sources_Accounts Accounts/*.cpp Accounts/*.h)
+file(GLOB_RECURSE sources_Anticheat Anticheat/*.cpp Anticheat/*.h)
 file(GLOB_RECURSE sources_Achievements Achievements/*.cpp Achievements/*.h)
 file(GLOB_RECURSE sources_Addons Addons/*.cpp Addons/*.h)
 file(GLOB_RECURSE sources_AI AI/*.cpp AI/*.h)
@@ -25,7 +26,7 @@ file(GLOB_RECURSE sources_Combat Combat/*.cpp Combat/*.h)
 file(GLOB_RECURSE sources_Conditions Conditions/*.cpp Conditions/*.h)
 file(GLOB_RECURSE sources_DataStores DataStores/*.cpp DataStores/*.h)
 file(GLOB_RECURSE sources_DungeonFinding DungeonFinding/*.cpp DungeonFinding/*.h)
-file(GLOB_RECURSE sources_Entities Entities/*.cpp Entities/*.h)
+file(GLOB_RECURSE sources_Entities Entities/*.cpp Entities/*.h Entities/*.hpp)
 file(GLOB_RECURSE sources_Events Events/*.cpp Events/*.h)
 file(GLOB_RECURSE sources_Globals Globals/*.cpp Globals/*.h)
 file(GLOB_RECURSE sources_Grids Grids/*.cpp Grids/*.h)
@@ -55,6 +56,7 @@ file(GLOB_RECURSE sources_World World/*.cpp World/*.h)
 
 source_group(CMake FILES CMakeLists.txt)
 source_group(Accounts FILES ${sources_Accounts})
+source_group(Anticheat FILES ${sources_Anticheat})
 source_group(Achievements FILES ${sources_Achievements})
 source_group(Addons FILES ${sources_Addons})
 source_group(AI FILES ${sources_AI})
@@ -108,6 +110,7 @@ endif ()
 set(game_STAT_SRCS
   ${game_STAT_SRCS}
   ${sources_Accounts}
+  ${sources_Anticheat}
   ${sources_Achievements}
   ${sources_Addons}
   ${sources_AI}
@@ -178,6 +181,7 @@ include_directories(
   ${CMAKE_SOURCE_DIR}/src/server/shared/Utilities
   ${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/Accounts
+  ${CMAKE_CURRENT_SOURCE_DIR}/Anticheat
   ${CMAKE_CURRENT_SOURCE_DIR}/Achievements
   ${CMAKE_CURRENT_SOURCE_DIR}/Addons
   ${CMAKE_CURRENT_SOURCE_DIR}/AI
@@ -218,6 +222,7 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/Entities/Unit
   ${CMAKE_CURRENT_SOURCE_DIR}/Entities/Vehicle
   ${CMAKE_CURRENT_SOURCE_DIR}/Entities/Transport
+  ${CMAKE_CURRENT_SOURCE_DIR}/Entities/SceneObject
   ${CMAKE_CURRENT_SOURCE_DIR}/Events
   ${CMAKE_CURRENT_SOURCE_DIR}/Globals
   ${CMAKE_CURRENT_SOURCE_DIR}/Grids/Cells

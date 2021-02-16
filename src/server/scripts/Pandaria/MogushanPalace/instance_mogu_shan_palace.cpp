@@ -104,7 +104,7 @@ public:
 			m_uiBossCount = 0;
 			
 			std::iota(std::begin(m_auiBossNumber), std::end(m_auiBossNumber), 0);
-			std::random_shuffle(std::begin(m_auiBossNumber), std::end(m_auiBossNumber));
+			zonaxtrema::random_shuffle(std::begin(m_auiBossNumber), std::end(m_auiBossNumber));
 		}
 
 		

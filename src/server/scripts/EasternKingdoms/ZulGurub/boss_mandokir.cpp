@@ -763,7 +763,7 @@ private:
 	}
 };
 
-class DevastatingSlamTargetSelector : public std::unary_function<Unit *, bool>
+class DevastatingSlamTargetSelector : public zonaxtrema::unary_function<Unit *, bool>
 {
 public:
 	DevastatingSlamTargetSelector(Creature* me, const Unit* victim) : _me(me), _victim(victim) {}

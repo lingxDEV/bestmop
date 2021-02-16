@@ -641,7 +641,7 @@ public:
     }
 };
 
-class PositionCheck : public std::unary_function<Unit*, bool>
+class PositionCheck : public zonaxtrema::unary_function<Unit*, bool>
 {
 public:
     explicit PositionCheck(Unit* _caster) : caster(_caster) { }

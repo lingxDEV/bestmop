@@ -30,7 +30,7 @@ enum Spells
     SPELL_FLAME_CANNON      = 62395
 };
 
-struct RangeCheck : public std::unary_function<Unit*, bool>
+struct RangeCheck : public zonaxtrema::unary_function<Unit*, bool>
 {
     RangeCheck(Unit* base, float min, float max) : __base(base), __mindist(min), __maxdist(max) {}
 

@@ -28,8 +28,8 @@ if(SCRIPTS)
   file(GLOB_RECURSE sources_Northrend Northrend/*.cpp Northrend/*.h)
   file(GLOB_RECURSE sources_OutdoorPvP OutdoorPvP/*.cpp OutdoorPvP/*.h)
   file(GLOB_RECURSE sources_Outland Outland/*.cpp Outland/*.h)
-  #file(GLOB_RECURSE sources_Pandaria Pandaria/*.cpp Pandaria/*.h)
-  #file(GLOB_RECURSE sources_Pet Pet/*.cpp Pet/*.h)
+  file(GLOB_RECURSE sources_Pandaria Pandaria/*.cpp Pandaria/*.h)
+  file(GLOB_RECURSE sources_Examples Examples/*.cpp Examples/*.h)
   file(GLOB_RECURSE sources_World World/*.cpp World/*.h)
 endif()
 
@@ -44,8 +44,8 @@ if(SCRIPTS)
   source_group(Northrend FILES ${sources_Northrend})
   source_group(OutdoorPvP FILES ${sources_OutdoorPvP})
   source_group(Outland FILES ${sources_Outland})
-  #source_group(Pandaria FILES ${sources_Pandaria})
-  #source_group(Pet FILES ${sources_Pet})
+  source_group(Pandaria FILES ${sources_Pandaria})
+  source_group(Examples FILES ${sources_Examples})
   source_group(World FILES ${sources_World})
 endif()
 
@@ -71,7 +71,7 @@ if(SCRIPTS)
   include(OutdoorPvP/CMakeLists.txt)
   include(Outland/CMakeLists.txt)
   include(Pandaria/CMakeLists.txt)
-  #include(Pet/CMakeLists.txt)
+  include(Examples/CMakeLists.txt)
   include(World/CMakeLists.txt)
 endif()
 
@@ -103,6 +103,7 @@ include_directories(
   ${CMAKE_SOURCE_DIR}/src/server/shared
   ${CMAKE_SOURCE_DIR}/src/server/shared/Database
   ${CMAKE_SOURCE_DIR}/src/server/game/Accounts
+  ${CMAKE_SOURCE_DIR}/src/server/game/Anticheat
   ${CMAKE_SOURCE_DIR}/src/server/game/Achievements
   ${CMAKE_SOURCE_DIR}/src/server/game/Addons
   ${CMAKE_SOURCE_DIR}/src/server/game/AI
@@ -175,6 +176,7 @@ include_directories(
   ${CMAKE_SOURCE_DIR}/src/server/game/Warden/Modules
   ${CMAKE_SOURCE_DIR}/src/server/game/Weather
   ${CMAKE_SOURCE_DIR}/src/server/game/World
+  ${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders
   ${ACE_INCLUDE_DIR}
   ${MYSQL_INCLUDE_DIR}
 )

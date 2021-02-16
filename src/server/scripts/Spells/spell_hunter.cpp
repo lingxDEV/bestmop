@@ -966,7 +966,7 @@ class spell_hun_barrage : public SpellScriptLoader
     public:
         spell_hun_barrage() : SpellScriptLoader("spell_hun_barrage") { }
 
-        class BarrageTargetCheck : public std::unary_function<Unit*, bool>
+        class BarrageTargetCheck : public zonaxtrema::unary_function<Unit*, bool>
         {
         public:
             explicit BarrageTargetCheck(Player* _caster) : caster(_caster) { }

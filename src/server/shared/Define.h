@@ -25,6 +25,7 @@
 #include <ace/ACE_export.h>
 
 #include <cstddef>
+#include <algorithm>
 
 #define TRINITY_LITTLEENDIAN 0
 #define TRINITY_BIGENDIAN    1
@@ -172,6 +173,12 @@ namespace zonaxtrema {
 		{
 			typedef ArgumentType argument_type;
 			typedef ResultType result_type;
+		};
+		template< class RandomIt >
+		void random_shuffle(RandomIt first, RandomIt last) {
+			std::random_device rd;
+			std::mt19937 g(rd());
+			std::shuffle(first, last, g);
 		};
 	}
 #endif //TRINITY_DEFINE_H

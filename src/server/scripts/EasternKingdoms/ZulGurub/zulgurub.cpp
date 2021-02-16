@@ -415,7 +415,7 @@ class spell_exploding_boulder : public SpellScriptLoader
         }
 };
 
-class BoulderSmashCheck : public std::unary_function<Unit*, bool>
+class BoulderSmashCheck : public zonaxtrema::unary_function<Unit*, bool>
 {
     public:
         explicit BoulderSmashCheck(Unit* _caster) : caster(_caster) { }

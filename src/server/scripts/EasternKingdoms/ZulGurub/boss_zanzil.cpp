@@ -643,7 +643,7 @@ class spell_frostburn_formula : public SpellScriptLoader
         }
 };
 
-class AuraCheck : public std::unary_function<Unit*, bool>
+class AuraCheck : public zonaxtrema::unary_function<Unit*, bool>
 {
 public:
 	explicit AuraCheck() {}

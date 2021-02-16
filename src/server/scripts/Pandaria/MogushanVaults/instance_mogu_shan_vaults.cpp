@@ -215,7 +215,7 @@ class instance_mogu_shan_vaults : public InstanceMapScript
                             for (auto itr : stoneGuardGUIDs)
                                 stoneGuards.push_back(itr);
 
-                            std::random_shuffle(stoneGuards.begin(), stoneGuards.end());
+                            zonaxtrema::random_shuffle(stoneGuards.begin(), stoneGuards.end());
 
                             if (Creature* stoneGuard = instance->GetCreature((*stoneGuards.begin())))
                                 stoneGuard->DespawnOrUnsummon();

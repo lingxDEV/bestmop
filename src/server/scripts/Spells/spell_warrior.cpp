@@ -1016,7 +1016,7 @@ class spell_warr_mocking_banner_taunt : public SpellScriptLoader
 public:
     spell_warr_mocking_banner_taunt() : SpellScriptLoader("spell_warr_mocking_banner_taunt") { }
 
-    class MockingBannerTauntTargetCheck : public std::unary_function<Unit*, bool>
+    class MockingBannerTauntTargetCheck : public zonaxtrema::unary_function<Unit*, bool>
     {
     public:
         explicit MockingBannerTauntTargetCheck(Player* _caster) : caster(_caster) { }

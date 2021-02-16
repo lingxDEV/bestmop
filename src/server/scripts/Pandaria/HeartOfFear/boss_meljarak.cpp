@@ -757,7 +757,7 @@ class npc_wind_bomb_meljarak : public CreatureScript
 
 // Srathik Amber Trapper: 62405.
 
-struct NonAlreadyAmberPrisoner : public std::unary_function<Unit*, bool>
+struct NonAlreadyAmberPrisoner : public zonaxtrema::unary_function<Unit*, bool>
 {
     public:
         NonAlreadyAmberPrisoner() { }

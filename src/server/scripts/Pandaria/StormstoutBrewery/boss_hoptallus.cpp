@@ -659,7 +659,7 @@ class npc_hoptallus_bopper_hammer : public CreatureScript
         }
 };
 
-class PlayerCheck : public std::unary_function<Unit*, bool>
+class PlayerCheck : public zonaxtrema::unary_function<Unit*, bool>
 {
     public:
         explicit PlayerCheck(Unit* _caster) : caster(_caster) { }
@@ -672,7 +672,7 @@ class PlayerCheck : public std::unary_function<Unit*, bool>
         Unit* caster;
 };
 
-class VerminCheck : public std::unary_function<Unit*, bool>
+class VerminCheck : public zonaxtrema::unary_function<Unit*, bool>
 {
     public:
         explicit VerminCheck(Unit* _caster) : caster(_caster) { }
