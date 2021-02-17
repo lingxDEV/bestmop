@@ -1025,8 +1025,10 @@ Player::~Player()
 {
     // it must be unloaded already in PlayerLogout and accessed only for loggined player
     //m_social = NULL;
+    
+    ///ZX Fix
 
-	m_mutex.unlock();
+	//m_mutex.unlock();
 
 	if (m_WargameRequest)
 		delete m_WargameRequest;

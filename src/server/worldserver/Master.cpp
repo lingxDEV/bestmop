@@ -135,7 +135,7 @@ int Master::Run()
 	sLog->outInfo(LOG_FILTER_SERVER_LOADING, "<Ctrl-C> to stop.\n");
 
 
-	sLog->outInfo(LOG_FILTER_SERVER_LOADING, "ZonaXtrema WOW 2019-2020	");
+	sLog->outInfo(LOG_FILTER_SERVER_LOADING, "ZonaXtrema 2019-2020	");
 	sLog->outInfo(LOG_FILTER_SERVER_LOADING, "https://github.com/davidwow1024/bestmop5.4.8");
 	sLog->outInfo(LOG_FILTER_SERVER_LOADING, "Mist of Pandaria 5.4.8");
 

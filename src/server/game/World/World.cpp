@@ -3392,8 +3392,10 @@ void World::InitCurrencyResetTime()
 
 	m_NextCurrencyReset = curTime > nextWeekResetTime ? nextWeekResetTime + WEEK : nextWeekResetTime;
 	sWorld->setWorldState(WS_CURRENCY_RESET_TIME, uint64(m_NextCurrencyReset));
-
-	char tbuff[26];
+	/// <summary>
+	/// ZX FIX
+	/// </summary>
+	char tbuff[128];
 	strftime(tbuff, 128, "%a, %b %d %Y at %I:%M:%S %p", localtime(&m_NextCurrencyReset));
 	sLog->outInfo(LOG_FILTER_SERVER_LOADING, "Calculating next currency reset time... (%s)", tbuff);
 

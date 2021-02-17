@@ -72,7 +72,11 @@ void VisibleNotifier::SendToSelf()
 
 void VisibleChangesNotifier::Visit(PlayerMapType &m)
 {
-	for (PlayerMapType::iterator iter = m.begin(); iter != m.end(); ++iter)
+	/// <summary>
+	/// ZX fix
+	/// </summary>
+	/// <param name="m"></param>
+    for (PlayerMapType::iterator iter = m.begin(); iter != m.end(); ++iter)
 		iter->getSource()->lockSharedVision();
 	
     for (PlayerMapType::iterator iter = m.begin(); iter != m.end(); ++iter)
@@ -88,7 +92,10 @@ void VisibleChangesNotifier::Visit(PlayerMapType &m)
                 if ((*i)->m_seer == iter->getSource())
                     (*i)->UpdateVisibilityOf(&i_object);
     }
-
+    /// <summary>
+    /// ZX fix
+    /// </summary>
+    /// <param name="m"></param>
 	for (PlayerMapType::iterator iter = m.begin(); iter != m.end(); ++iter)
 		iter->getSource()->unlockSharedVision();
 }

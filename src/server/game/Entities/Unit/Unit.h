@@ -1867,7 +1867,10 @@ class Unit : public WorldObject
 
 		// lock the acces 
 		mutable std::mutex m_sharedVisionMutex;
-		void lockSharedVision() { m_sharedVisionMutex.try_lock(); }
+		void lockSharedVision() { 
+            m_sharedVisionMutex.try_lock(); 
+        }
+
 		void unlockSharedVision() { m_sharedVisionMutex.unlock(); }
 		
 

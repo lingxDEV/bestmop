@@ -1525,7 +1525,7 @@ void SpellMgr::LoadSpellRanks()
     }
     mSpellChains.clear();
     //                                                     0             1      2
-    QueryResult result = WorldDatabase.Query("SELECT first_spellId, spellId, rank from spell_ranks ORDER BY first_spellId, rank");
+    QueryResult result = WorldDatabase.Query("SELECT first_spellId, spellId, spell_rank from spell_ranks ORDER BY first_spellId, spell_rank");
 
     if (!result)
     {

@@ -435,7 +435,8 @@ Unit::~Unit()
     ASSERT(m_dynObj.empty());
     ASSERT(m_AreaTrigger.empty());
 
-	m_sharedVisionMutex.unlock();
+	//m_sharedVisionMutex.unlock();
+    //unlockSharedVision();
 }
 
 void Unit::Update(uint32 p_time)
